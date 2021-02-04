@@ -1,7 +1,7 @@
 const Pool = require('pg').Pool
 
 const pool = new Pool({
-    user: 'me',
+    user: 'jessbon',
     host: 'localhost',
     database: 'toitech',
     password: 'password',
@@ -31,6 +31,7 @@ const getProductById = (request, response) => {
 }
 
 const createProduct = (request, response) => {
+    console.log(request)
     const {title, price, description, image, likes} = request.body;
 
     pool.query('INSERT INTO products (title, price, description, image, likes) VALUES ($1, $2, $3, $4, $5)',
@@ -40,7 +41,7 @@ const createProduct = (request, response) => {
                 throw error
             }
 
-            response.status(201).send(`Product added with ID: ${result.insertId}`)
+            response.status(201).send(`Product added with ID: ${results.insertId}`)
     })
 }
 

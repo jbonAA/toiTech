@@ -22,8 +22,11 @@ Schema | Name | Type | Owner
     public | products | table | jessbon
         (1 row)
 
+// 4. node index.js run server
 - node index.js : ensure app is running App is running on port 3000
 
--import addproduct node seeds.js
+
+// 5. node seeds.js update table
+-import addproduct node seeds.js : ensure axios post requests are working
 
 
