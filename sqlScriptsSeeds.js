@@ -27,6 +27,6 @@ Schema | Name | Type | Owner
 
 
 // 5. node seeds.js update table
--import addproduct node seeds.js : ensure axios post requests are working
+-node seeds.js : ensure axios post requests are working
 
 
