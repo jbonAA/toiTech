@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 const updateTables = (dataArr) => {
-    
     //iterate through response data
     dataArr.forEach( async (product) => {
         //deconstruct keys
