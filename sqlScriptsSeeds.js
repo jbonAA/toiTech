@@ -22,4 +22,8 @@ Schema | Name | Type | Owner
     public | products | table | jessbon
         (1 row)
 
+- node index.js : ensure app is running App is running on port 3000
+
+-import addproduct node seeds.js
+
 
