@@ -124,12 +124,17 @@
     width: 90%;
 }
 
+#clicked-page {
+  color: blue;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   height: 5%;
   width: 100%;
+  padding: 1%;
   margin: auto;
   list-style: none;
 }

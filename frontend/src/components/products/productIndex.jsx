@@ -30,10 +30,16 @@ class ProductIndex extends React.Component {
             
     }
     
-    handlePageNum(n) {
+    handlePageNum(n, e) {
         let {currentPage, productsPerPage, products} = this.state;
         currentPage = n
 
+        const buttons = document.getElementsByClassName('pageLinks')
+        Array.from(buttons).forEach((el) => {
+            el.setAttribute('id', "")
+        })
+        e.target.setAttribute('id', 'clicked-page')
+        console.log(e)
         const indexOfLastProd = currentPage * productsPerPage;
         const indexOfFirstProd = indexOfLastProd - productsPerPage;
         const productsOnCurrentPage = products.slice(indexOfFirstProd, indexOfLastProd)
@@ -72,7 +78,7 @@ class ProductIndex extends React.Component {
                     {pageNumbers.map((n, i) => {
                         return (
                             <li key={`pagin${i}`} id="pagin-li">
-                                <a href='#' onClick={() => this.handlePageNum(n)}>{n}</a>
+                                <a href='#' className={'pageLinks'} id={i === 0 ? 'clicked-page' : ""} onClick={(e) => this.handlePageNum(n, e)}>{n}</a>
                             </li>
                         )
                     })}
