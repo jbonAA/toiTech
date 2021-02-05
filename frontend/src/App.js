@@ -5,6 +5,7 @@ import ProductIndex from './components/products/productIndex';
 
 
 function App() {
+  
   return (
     <div className="App">
       <MainNav />
